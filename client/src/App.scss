@@ -1,0 +1,59 @@
+@import "./SCSS/bootstrap";
+@import "./SCSS/landingPage";
+@import "./SCSS/login";
+@import "./SCSS/signup";
+@import "./SCSS/podcastDownloader";
+@import "./SCSS/podcastGenerator";
+@import "./SCSS/header";
+@import "./SCSS/heroSection";
+@import "./SCSS/midSection";
+.plane2 {
+  position: absolute;
+  right: 0;
+  width: 20%;
+  top: 116%;
+  z-index: 100;
+}
+.arrow {
+  position: absolute;
+  right: 6%;
+  width: 6%;
+  top: 113%;
+}
+.cartoon {
+  position: absolute;
+  left: 7%;
+  width: 25%;
+  top: 222%;
+  z-index: -1;
+}
+.arrow2 {
+  position: absolute;
+  right: 21%;
+  width: 12%;
+  top: 55%;
+}
+.cartoon2 {
+  position: absolute;
+  left: 14%;
+  width: 33%;
+  top: 21%;
+  z-index: -2;
+}
+@media screen and (max-width: 768px) {
+  .plane2 {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  .cartoon {
+    display: none;
+  }
+  .arrow2 {
+    display: none;
+  }
+  .cartoon2 {
+    display: none;
+  }
+}
