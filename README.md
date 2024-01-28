@@ -14,14 +14,14 @@
     <br />
     <a href="https://storage.googleapis.com/lablab-video-submissions/cljh21tkq000035715n61ieja%2Fraw%2Fsubmission-video-x-cljh21tkq000035715n61ieja-clkf6zdvo00113b6xec0dcr7h.mp4" target="_blank"><img src="https://i.imgur.com/IW6YRNP.png" ></a>
     <br />
-    <a href="https://github.com/Louvivien/AIpodcastgenerator"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Ahmadjajja/AIpodcastgenerator"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://lablab.ai/event/eleven-labs-ai-hackathon/virtual-influencers/collabtalk-ai-dialogue-podcast-generator">View Project</a>
     ·
-    <a href="https://github.com/Louvivien/AIpodcastgenerator/issues">Report Bug</a>
+    <a href="https://github.com/Ahmadjajja/AIpodcastgenerator/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Louvivien/AIpodcastgenerator/issues">Request Feature</a>
+    <a href="https://github.com/Ahmadjajja/AIpodcastgenerator/issues">Request Feature</a>
         ·
     <a href="https://discord.gg/e3sZ2wxWR2">Join our Discord</a>
   </p>
@@ -131,16 +131,16 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [python-image]: https://img.shields.io/badge/python-v3.6+-blue.svg
 [license-image]: https://img.shields.io/badge/license-MIT-blue.svg
 
-[contributors-shield]: https://img.shields.io/github/contributors/Louvivien/AIpodcastgenerator.svg?style=for-the-badge
-[contributors-url]: https://github.com/Louvivien/AIpodcastgenerator/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Louvivien/AIpodcastgenerator.svg?style=for-the-badge
-[forks-url]: https://github.com/Louvivien/AIpodcastgenerator/network/members
-[stars-shield]: https://img.shields.io/github/stars/Louvivien/AIpodcastgenerator.svg?style=for-the-badge
-[stars-url]: https://github.com/Louvivien/AIpodcastgenerator/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Louvivien/AIpodcastgenerator.svg?style=for-the-badge
-[issues-url]: https://github.com/Louvivien/AIpodcastgenerator/issues
-[license-shield]: https://img.shields.io/github/license/Louvivien/AIpodcastgenerator.svg?style=for-the-badge
-[license-url]: https://github.com/Louvivien/AIpodcastgenerator/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/Ahmadjajja/AIpodcastgenerator.svg?style=for-the-badge
+[contributors-url]: https://github.com/Ahmadjajja/AIpodcastgenerator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Ahmadjajja/AIpodcastgenerator.svg?style=for-the-badge
+[forks-url]: https://github.com/Ahmadjajja/AIpodcastgenerator/network/members
+[stars-shield]: https://img.shields.io/github/stars/Ahmadjajja/AIpodcastgenerator.svg?style=for-the-badge
+[stars-url]: https://github.com/Ahmadjajja/AIpodcastgenerator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Ahmadjajja/AIpodcastgenerator.svg?style=for-the-badge
+[issues-url]: https://github.com/Ahmadjajja/AIpodcastgenerator/issues
+[license-shield]: https://img.shields.io/github/license/Ahmadjajja/AIpodcastgenerator.svg?style=for-the-badge
+[license-url]: https://github.com/Ahmadjajja/AIpodcastgenerator/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
 
