@@ -54,7 +54,7 @@
 5. Run the script:
 
     ```bash
-    python main.py
+    python app.py
     ```
 
 
@@ -105,7 +105,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [license-shield]: https://img.shields.io/github/license/Ahmadjajja/AIpodcastgenerator.svg?style=for-the-badge
 [license-url]: https://github.com/Ahmadjajja/AIpodcastgenerator/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-
-
-
-
