@@ -17,13 +17,9 @@
     <a href="https://github.com/Ahmadjajja/AIpodcastgenerator"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Ahmadjajja/AIpodcastgenerator">View Project</a>
-    ·
     <a href="https://github.com/Ahmadjajja/AIpodcastgenerator/issues">Report Bug</a>
     ·
     <a href="https://github.com/Ahmadjajja/AIpodcastgenerator/issues">Request Feature</a>
-        ·
-    <a href="https://discord.gg/e3sZ2wxWR2">Join our Discord</a>
   </p>
 </p>
 
@@ -45,7 +41,7 @@
 3. Go to the server folder
     ```bash
 
-cd server
+    cd server
     ```
 
 
