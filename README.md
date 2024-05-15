@@ -67,7 +67,7 @@ Open another terminal windows
 6. 
     ```bash
 
-cd client
+    cd client
     ```
 
 
