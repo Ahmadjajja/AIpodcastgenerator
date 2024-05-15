@@ -50,6 +50,7 @@ def get_all_voices():
     if response.status_code == 200:
         data = response.json()
         # Now you can work with the JSON response 'data'
+        # print("data ", data)
         return data
     else:
         return (f"Failed to retrieve data. Status code: {response.status_code}")
@@ -131,16 +132,19 @@ def generate_audio(script, speaker1, speaker2,
 
         audio_parts = []
         for i in range(1, len(parts), 2):
+            print("i -> ", i)
             speaker = parts[i].strip()
             text = parts[i+1].strip()
             
             # Generate audio for this part
             if speaker == f'{speaker1.title()}:':
+                # breakpoint()
                 audio = generate(text=text, voice=sp1_voice, model="eleven_monolingual_v1")
             elif speaker == f'{speaker2.title()}:':
                 audio = generate(text=text, voice=sp2_voice, model="eleven_monolingual_v1")
             print("Generated audio for: ", speaker)
             audio_parts.append(audio)
+            
 
         # Combine the audio parts
         final_audio = concatenate_audio(audio_parts)  
@@ -151,3 +155,6 @@ def generate_audio(script, speaker1, speaker2,
         return False
 
     return True
+
+
+# "{"speaker1":"Hasnain","speaker2":"Saad","speaker1_age":"","speaker2_age":"","speaker1_gender":"","speaker2_gender":"","speaker1_accent":"","speaker2_accent":"","speaker1_voice_name":"Drew","speaker2_voice_name":"Drew","content":"https://github.com/Ahmadjajja"}"

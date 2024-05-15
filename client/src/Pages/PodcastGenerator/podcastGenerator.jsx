@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
-import mic from "../../Assets/mic.png";
 import axios from "axios";
-import { Link, useNavigate } from "react-router-dom";
+import { FaPause, FaPlay } from 'react-icons/fa';
 import { ThreeDots } from "react-loader-spinner";
+import { Link, useNavigate } from "react-router-dom";
 import Select from 'react-select';
-import { FaPlay, FaPause } from 'react-icons/fa';
+import mic from "../../Assets/mic.png";
 
 
 const spkData = {
@@ -31,7 +31,7 @@ const spkData = {
 
 function VoiceSelect({onChange, field_name}) {
 
-  const base_url = "voices";
+  const base_url = "http://127.0.0.1:5000/voices";
   const [voices, setVoices] = useState([]);
 
   useEffect(() => {
@@ -138,7 +138,7 @@ function PodcastGenerator() {
   };
 
   const podcastGenerateHandler = () => {
-    const url = "send_content";
+    const url = "http://127.0.0.1:5000/send_content";
     // const url = process.env.REACT_APP_BASE_URL + 'send_content';
 
 

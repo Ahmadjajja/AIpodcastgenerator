@@ -24,7 +24,7 @@ from flask_cors import CORS, cross_origin
 # Load environment variables
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
-set_api_key(os.getenv('ELEVEN_API_KEY'))
+set_api_key(os.getenv('ELEVENLABS_API_KEY'))
 
 app = Flask(__name__, static_folder=os.path.abspath("./client/build"))
 cors = CORS(app)
@@ -65,7 +65,7 @@ def send_content():
       text_formatted = (formatter.format_transcript(srt)).replace("\n"," ").split()
       text_formatted = text_formatted[:15000]
       text_formatted = ' '.join(text_formatted)
-      prompt = f"Make a dialogue between two people (give them names {data['speaker1']} and {data['speaker2']} respectively) for a podcast based on the following content, make this fun and entertaining, less robotic and more natural, here is the content : {text_formatted}"
+      prompt = f"Make a dialogue between two people (give them names {data['speaker1']} and {data['speaker2']} respectively) for a podcast based on the following content, make this fun and entertaining, less robotic and more natural, here is the content. only generate 5 dialogues : {text_formatted}. Don't add any announcement at the end."
       result = askGPT(prompt)
       print(result)
 

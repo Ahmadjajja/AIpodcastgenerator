@@ -7,5 +7,5 @@ python-dotenv
 requests
 openai
 youtube_transcript_api
-elevenlabs
+elevenlabs==0.2.19
 pydub
