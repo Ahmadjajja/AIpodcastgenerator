@@ -55,7 +55,7 @@ cd server
     pip install -r requirements.txt
     ```
 
- 5. Run the script:
+5. Run the script:
 
     ```bash
     python main.py
@@ -64,21 +64,21 @@ cd server
 
 Open another terminal windows
     
- 6. 
+6. 
     ```bash
 
 cd client
     ```
 
 
- 7. install packages
+7. install packages
     ```bash
 
    npm i
     ```
 
 
- 8. start the client
+8. start the client
     ```bash
 
    npm start
