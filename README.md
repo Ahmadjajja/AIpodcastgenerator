@@ -55,23 +55,7 @@ cd server
     pip install -r requirements.txt
     ```
 
-5. Create a `.env` file in the root directory and add your Instagram username and password:
-
-    ```bash
-
-        MONGO_URI=
-        MONGO_PASSWORD=
-        JWT_SECRET=
-        ELEVEN_API_KEY=
-        PINECONE_API_KEY=
-        PINECONE_ENV=
-        SERPAPI_API_KEY=
-        OPENAI_API_KEY=
-        CACHE_REDIS_URL=
-        HUGGING_FACE_API_KEY=
-    ```
-
-6. Run the script:
+ 5. Run the script:
 
     ```bash
     python main.py
@@ -80,43 +64,26 @@ cd server
 
 Open another terminal windows
     
-7. 
+ 6. 
     ```bash
 
 cd client
     ```
 
 
-8. install packages
+ 7. install packages
     ```bash
 
    npm i
     ```
 
 
-9. start the client
+ 8. start the client
     ```bash
 
    npm start
 
     ```
-
-
-
-
-
-## Usage
-
-
-
-## Troubleshooting
-
-If the script is not working as expected, check the following:
-
-- Make sure your Instagram username and password are correct and the account is not locked or restricted.
-- Check the console for any error messages.
-
-## Ongoing work
 
 
 
