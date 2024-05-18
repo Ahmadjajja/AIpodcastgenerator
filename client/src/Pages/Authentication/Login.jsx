@@ -107,15 +107,23 @@ function Login() {
                       )}
                     </button>
                   </div>
-                  <div className="mb-3 mt-1 m form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="exampleCheck1"
-                    />
-                    <label className="form-check-label" for="exampleCheck1">
-                      Remember me
-                    </label>
+                  <div className="d-flex justify-content-between">
+                    <div className="mb-3 mt-1 m form-check">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label className="form-check-label" for="exampleCheck1">
+                        Remember me
+                      </label>
+                    </div>
+
+                    <div className="mb-3 mt-1 m form-check">
+                      <Link className="form-check-label" to="/forgetpass">
+                        Forget your password
+                      </Link>
+                    </div>
                   </div>
                   <div className="text-center">
                     <button
