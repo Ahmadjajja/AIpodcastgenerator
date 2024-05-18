@@ -1,8 +1,7 @@
 import React from "react";
-import person from "../../Assets/person.png";
-import orderProcess from "../../Assets/OrderProcess.png";
 import { Link } from "react-router-dom";
-import PodcastDownloader from "../podcastDownloader/podcastDownloader";
+import orderProcess from "../../Assets/OrderProcess.png";
+import person from "../../Assets/person.png";
 function HeroSection() {
   return (
     <>
@@ -45,7 +44,7 @@ function HeroSection() {
                 </div>
                 <p>
                   Generate Conversational podcasts using your favourite news
-                  articles or simply by giving a topic.
+                  articles.
                 </p>
                 <Link
                   className="btn btn-lg py-3 px-5"

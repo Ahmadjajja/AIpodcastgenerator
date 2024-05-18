@@ -1,9 +1,9 @@
 import React from "react";
-import lock from "../../Assets/lock.png";
+import car from "../../Assets/car.png";
 import hand from "../../Assets/hand.png";
+import lock from "../../Assets/lock.png";
 import subtract1 from "../../Assets/subtract1.png";
 import subtract2 from "../../Assets/subtract2.png";
-import car from "../../Assets/car.png";
 function MidSection() {
   return (
     <>
@@ -27,7 +27,7 @@ function MidSection() {
                   <h1>Upload URL</h1>
                   <p>
                     Don't have your script? no worries. Give us a news article
-                    URL or simply a topic name
+                    URL
                   </p>
                 </div>
               </div>
