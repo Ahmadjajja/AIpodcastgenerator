@@ -191,7 +191,7 @@ function PodcastGenerator() {
               </div>
             </div>
             {/* Row 2 */}
-            <div className="row">
+            {/*<div className="row">
               <div className="col">
                 <div class="input-group flex-nowrap">
                   <textarea
@@ -208,14 +208,14 @@ function PodcastGenerator() {
                   />
                 </div>
               </div>
-            </div>
+            </div>*/}
             {/* Row 3 */}
-            <div className="row row3 my-4">
+            {/*<div className="row row3 my-4">
               <div className="col or">OR</div>
-            </div>
+            </div>*/}
             {/* Row 4 */}
-            <div className="row row4 mb-5">
-              <div className="col-sm-12 col-md-8 rd">
+            <div className="row row4 mb-5 mt-3">
+              <div className="col-sm-12 col-md-12 rd">
                 <div className="row">
                   <div className="col-2"></div>
                   <div className="col-8 ">
@@ -231,6 +231,7 @@ function PodcastGenerator() {
                         onChange={handleChange}
                       />
                     </div>
+                    {/*
                     <div className="col or">OR</div>
                     <div class="input-group flex-nowrap my-3">
                       <input
@@ -243,11 +244,12 @@ function PodcastGenerator() {
                         name="topic"
                         onChange={handleChange}
                       />
-                    </div>
+                    </div>*/}
                   </div>
                   <div className="col-2"></div>
                 </div>
               </div>
+              {/*
               <div className="col-sm-12 col-md-4 mt-sm-4 mt-md-0">
                 <div className="row">
                   <div className="col-2"></div>
@@ -270,6 +272,7 @@ function PodcastGenerator() {
                   <div className="col-2"></div>
                 </div>
               </div>
+  */}
             </div>
             {/* Row 5 */}
             <div className="row my-5 py-4">
