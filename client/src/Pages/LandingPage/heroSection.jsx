@@ -1,8 +1,23 @@
 import React from "react";
+import { useState, useEffect } from "react";
+
 import { Link } from "react-router-dom";
 import orderProcess from "../../Assets/OrderProcess.png";
 import person from "../../Assets/person.png";
+
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../../firebase";
+
 function HeroSection() {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
   return (
     <>
       <div
@@ -49,7 +64,7 @@ function HeroSection() {
                 <Link
                   className="btn btn-lg py-3 px-5"
                   style={{ backgroundColor: "#F54748", color: "white" }}
-                  to="podcastGenerator"
+                  to={user ? "podcastGenerator" : "signup"}
                 >
                   Try Now
                 </Link>

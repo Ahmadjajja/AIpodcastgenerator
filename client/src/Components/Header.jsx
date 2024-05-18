@@ -1,8 +1,40 @@
 import React from "react";
 import plane from "../Assets/plane.png";
 import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { onAuthStateChanged, signOut } from "firebase/auth";
+
+import { auth } from "../firebase";
+import { toast } from "react-toastify";
+
 function Header() {
   const Navigate = useNavigate();
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
+  const logoutHandler = async () => {
+    try {
+      const isLogout = window.confirm("Are you sure to logged out?");
+
+      if (isLogout) {
+        await signOut(auth);
+        toast.success("User loggedOut!");
+        setUser(null);
+      } else {
+        return;
+      }
+    } catch (error) {
+      toast.error("Error signing out:", error);
+    }
+  };
+
   return (
     <>
       <div id="header">
@@ -30,24 +62,45 @@ function Header() {
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
               <div class="navbar-nav ms-auto">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="#"
-                  style={{
-                    cursor: "pointer",
-                    textDecoration: "none",
-                    color: "#F54748",
-                    fontFamily: "Poppins, sans-serif",
-                    fontWeight: 500,
-                    fontSize: "16px",
-                    lineHeight: "24px",
-                    textAlign: "center",
-                  }}
-                  onClick={() => Navigate("/signUp")}
-                >
-                  Signup
-                </a>
+                {user ? (
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    style={{
+                      cursor: "pointer",
+                      textDecoration: "none",
+                      color: "#F54748",
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 500,
+                      fontSize: "16px",
+                      lineHeight: "24px",
+                      textAlign: "center",
+                    }}
+                    onClick={logoutHandler}
+                  >
+                    Logout
+                  </a>
+                ) : (
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    style={{
+                      cursor: "pointer",
+                      textDecoration: "none",
+                      color: "#F54748",
+                      fontFamily: "Poppins, sans-serif",
+                      fontWeight: 500,
+                      fontSize: "16px",
+                      lineHeight: "24px",
+                      textAlign: "center",
+                    }}
+                    onClick={() => Navigate("/signUp")}
+                  >
+                    Signup
+                  </a>
+                )}
                 <a
                   class="nav-link"
                   href="#"
