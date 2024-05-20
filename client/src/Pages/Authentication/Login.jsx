@@ -2,23 +2,45 @@ import React, { useState, useEffect } from "react";
 import { AiOutlineEyeInvisible, AiOutlineEye } from "react-icons/ai";
 import { BiArrowBack } from "react-icons/bi";
 import { Link, useNavigate } from "react-router-dom";
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../../firebase";
+import { toast } from "react-toastify";
+
 const initialState = { email: "", password: "" };
 
 function Login() {
   const [state, setState] = useState(initialState);
   const [isPasswordShow, setIsPasswordShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     setState({ ...state, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(state);
-
+    setIsLoading(true);
     const { email, password } = state;
-
-    console.log(state);
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      // User signed in successfully
+      if (user) {
+        toast.success("Sign-in successful!");
+        navigate("/");
+      }
+      // Additional logic here...
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      // Handle error here
+      toast.error("Error signing in:", errorCode, errorMessage);
+    }
+    setIsLoading(false);
   };
 
   return (
@@ -85,15 +107,23 @@ function Login() {
                       )}
                     </button>
                   </div>
-                  <div className="mb-3 mt-1 m form-check">
-                    <input
-                      type="checkbox"
-                      className="form-check-input"
-                      id="exampleCheck1"
-                    />
-                    <label className="form-check-label" for="exampleCheck1">
-                      Remember me
-                    </label>
+                  <div className="d-flex justify-content-between">
+                    <div className="mb-3 mt-1 m form-check">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="exampleCheck1"
+                      />
+                      <label className="form-check-label" for="exampleCheck1">
+                        Remember me
+                      </label>
+                    </div>
+
+                    <div className="mb-3 mt-1 m form-check">
+                      <Link className="form-check-label" to="/forgetpass">
+                        Forget your password
+                      </Link>
+                    </div>
                   </div>
                   <div className="text-center">
                     <button
